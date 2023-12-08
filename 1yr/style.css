@@ -1,10 +1,24 @@
-main {  
-  background-image: url("bg.png");
-  background-size: 100vw 80%; /* Ensure the image covers the entire viewport */
-  /* Optionally, set the background attachment and position */
-  background-attachment:scroll; 
-  background-repeat:repeat-y;
-  background-position: center top; /* Center the background image */
+@media (min-width: 320px) {
+  main {  
+    background-image: url("bg.png");
+    background-size: 100% 60%; /* Ensure the image covers the entire viewport */
+    /* Optionally, set the background attachment and position */
+    background-attachment:scroll; 
+    background-repeat:repeat-y;
+    background-position: center top; /* Center the background image */
+  }
+}
+
+@media (min-width: 801px) {
+  main {  
+    background-image: url("bg.png");
+    background-size: 100vw 80%; /* Ensure the image covers the entire viewport */
+    /* Optionally, set the background attachment and position */
+    background-attachment:scroll; 
+    background-repeat:repeat-y;
+    background-position: center top; /* Center the background image */
+  }
+
 }
 
 .contenitore {
@@ -147,10 +161,31 @@ margin: 0 auto;
     left: 5%;
     pointer-events: none; /* This allows clicks to pass through */
   }
-  #gif-container {
-    min-height: 405px;
+  
 
+
+@media (min-width: 320px) {
+  #gif-container {
+
+    min-height: 100px; /* Set minimum height for smaller screens */
   }
+
+  .parent{
+    padding-bottom: 16px;
+  }
+}
+
+@media (min-width: 801px) {
+   #gif-container{
+    min-height: 406px; /* Set minimum height for medium-sized screens */
+    padding-bottom: 16px;
+  }
+  .parent{
+    padding-bottom: 48px;
+  }
+}
+
+  
 
   .letter-container-1 {
     text-align: center;
